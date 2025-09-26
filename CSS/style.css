@@ -2,3 +2,62 @@
   width: 20%;
   border-radius: 50%;
 }
+
+.logo-revou {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-image: url("../images/Logo-Revou.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.logo-item {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.foto-menu {
+  width: 100%;
+}
+
+.logo-jakarta {
+  background-image: url("../images/patung-jakarta.jpg");
+}
+
+.logo-bandung {
+  background-image: url("../images/patung-bandung.jpg");
+}
+
+.logo-surabaya {
+  background-image: url("../images/patung-surabaya.jpg");
+}
+
+.logo-item h3 {
+  position: absolute;
+  left: 50%;
+  bottom: -30px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+}
