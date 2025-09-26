@@ -4,33 +4,112 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mini Project Revou</title>
+    <!-- link ke css -->
     <link rel="stylesheet" href="CSS/style.css" />
+
+    <!-- link cdn tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body>
-    <section>
-      <div>
-        <img
-          class="image-class"
-          src="images/gambar.jpg"
-          alt="Descriptive Alt Text"
-        />
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+    <header class="header">
+      <div class="logo-revou">
       </div>
-    </section>
+
+      <!-- navigation menu -->
+      <nav class="nav-menu">
+        <ul class="flex h-[100%] items-center gap-[2px]">
+          <li class="border p-[6px]"><a href="home">Home</a></li>
+          <li class="border p-[6px]"><a href="Profile">Profile</a></li>
+          <li class="border p-[6px]"><a href="portofolio">Portofolio</a></li>
+          <li class="border p-[6px]"><a href="massage-us">Massage US</a></li>
+        </ul>
+      </nav>
+    </header>
+    <hr />
 
     <main>
-      <h2>Selamat Datang di Mini Project</h2>
-      <p>Ini adalah proyek sederhana untuk mendemonstrasikan struktur HTML.</p>
-    </main>
+      <!-- home section -->
+      <section id="home" class="min-h-[500px] flex flex-col justify-center items-center gap-[10px]">
+        <h1 class="text-[24px] font-bold">Welcome to Revou Mini Project</h1>
+        <p class="text-[16px]">
+          This is a simple mini project to practice HTML, CSS, and JavaScript.
+        </p>
+        <img class="foto-home" src="images/patung-jakarta.jpg" alt="patung-jakarta">
+      </section>
+
+      <hr>
+      <hr class="my-[5px]">
+
+      <!-- portfolio section -->
+      <div class="container-wrapper">
+        <section id="portfolio" class="min-h-[500px] flex flex-col mt-[20px] gap-[10px]">
+          <h1 class="text-[20px] font-semibold">Our Headquarter</h1>
+
+          <div class="flex gap-[70px] flex-wrap justify mt-[20px]">
+            <div class="logo-item logo-jakarta">
+              <h3>Jakarta</h3>
+            </div>
+        
+            <div class="logo-item logo-bandung">
+              <h3>Bandung</h3>
+            </div>
+        
+            <div class="logo-item logo-surabaya">
+              <h3>Surabaya</h3>
+            </div>
+          </div>
+        </section>
+      </div>
+      <hr>
+
+      <!-- massage us section -->
+      <section id="massage-us" class="min-h-[500px] flex flex-col justify-center items-center gap-[10px]">
+        <h2 class="text-[20px] font-semibold mb-[20px]">Massage Us</h2>
+        <div class="flex flex-row w-full justify-center gap-[40px]">
+          <!-- Form kiri -->
+          <form id="contact-form" class="flex flex-col gap-[10px] w-[350px] bg-white p-[20px] border rounded shadow">
+            <div class="flex items-center mb-2">
+              <label for="name" class="w-[110px] text-right mr-2">Nama</label>
+              <span class="mr-2">:</span>
+              <input type="text" id="name" name="name" placeholder="Nama" class=" p-[8px] border" required />
+            </div>
+            <div class="flex items-center mb-2">
+              <label for="date" class="w-[110px] text-right mr-2">Tanggal Lahir</label>
+              <span class="mr-2">:</span>
+              <input type="date" id="date" name="date" class="flex-1 p-[8px] border" required />
+            </div>
+            <div class="flex items-center mb-2">
+              <label for="gender" class="w-[110px] text-right mr-2">Jenis Kelamin</label>
+              <span class="mr-2">:</span>
+              <div class="flex gap-[10px] flex-1">
+                <label><input type="radio" name="gender" value="Laki-laki" required> Laki-Laki</label>
+                <label><input type="radio" name="gender" value="Perempuan" required> Perempuan</label>
+              </div>
+            </div>
+            <div class="flex items-start mb-2">
+              <label for="message" class="w-[110px] text-right mr-2 mt-2">Pesan</label>
+              <span class="mr-2 mt-2">:</span>
+              <textarea id="message" name="message" placeholder="Pesan" class="flex-1 p-[8px] border" required></textarea>
+            </div>
+            <div class="flex justify-center mt-4">
+              <button type="submit" class="w-full bg-blue-500 text-white p-[10px] rounded">Submit</button>
+            </div>
+          </form>
+          <!-- Box hasil kanan -->
+          <div id="result-box" class="w-[400px] min-h-[250px] border rounded bg-white p-[20px] shadow flex flex-col" style="white-space:pre-line">
+            <span class="font-bold">Current time :</span> <span id="current-time"></span>
+            <div id="result-content" class="mt-[10px]"></div>
+          </div>
+        </div>
+      </section>
+      <hr>
 
     <footer>
-      <p>&copy; 2023 Mini Project. All rights reserved.</p>
+      <p class="text-center p-[10px]">
+        &copy; 2024 Revou Mini Project. All rights reserved.
+      </p>
     </footer>
+    <hr>
 
     <script src="JS/script.js"></script>
   </body>
