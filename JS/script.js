@@ -1,3 +1,18 @@
+// Smooth scroll for navbar
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".nav-link").forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      const href = link.getAttribute("href");
+      if (href && href.startsWith("#")) {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    });
+  });
+});
 // Script untuk menampilkan hasil input form ke box kanan
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contact-form");
@@ -25,3 +40,11 @@ document.addEventListener("DOMContentLoaded", function () {
       `<b>Pesan :</b> ${message}`;
   });
 });
+
+// wellcome massage
+welcomeMessage();
+
+function welcomeMessage() {
+  let userName = prompt("Please enter your name:", "Ahmad");
+  document.getElementById("username").textContent = userName;
+}
